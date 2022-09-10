@@ -1,0 +1,49 @@
+// Data Modelling Concept
+// Data Modelling is done to model the application data via schema
+// i.e schema is the model or defines the model i.e how the data is being modelled.
+// All in all defining schema is doing data modelling or giving data a model
+
+// In Relational Schema - Modeling the data is done independent of queries i.e data model is independent of queries
+// In Mongo - What is used together is stored together
+
+// In Relational Schema - we define the schema first and then develop the application and queries
+// In Mongo - We identify the queries first according to our application and then define the schema
+
+// In Relational Schema - only one solution is possible i.e with 3rd normal form mostly
+// In Mongo - many solutions are possible for modelling in a application
+
+// Questions to ask when modelling data or doing data modelling
+// 1.What are predefined data set or what kind of data is in hand?
+// 2.Always consider data modelling according to unique needs ofyour application
+// 3.How you will use these data or where will you need these data
+// 4.How the data will be Queried
+// 5.How many queries will be fired
+// 6.How much filter is there per Query
+// 7.How often you change and access the data.
+
+// Phases or Methodology in doing Data Modelling
+// Which involves-
+// 1.Describing the Workload
+        // Knowing and describing the size of data
+        // Knowing the operations that needs to be performed
+            // Quantifying those operations
+            // Qualifying various operations(critical or non-critical)
+
+        //Output -> 1. Data Sizing
+        //          2. Various operations that will be performed
+        //          3. Assumptions made on quantifying operations and size   
+        //          4. Various Queries that can be made
+
+// 2. Identify Relationships and Model them
+        // Identify various Relationships that exist among the data
+        // Quantify the no of those relationships
+        // And then decide whether to
+            // 1.Embed
+            // 2.Link or Reference
+            
+        // Output -> 1. Various Collecions
+        //           2. Shape and Structure for their model
+        //           3. Fields    
+
+// 3. Apply Patterns 
+        // Recognize and Apply the required pattern       

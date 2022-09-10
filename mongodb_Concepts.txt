@@ -1,0 +1,28 @@
+// ObjectId Concepts
+
+// Mongoose is an abstraction over mongoDb driver -> which actually generates almost unique object identifier 
+// ObjectId is nothing but an unique identifier given to an document object.
+// So when we create a new object or Document mongoose behind the scenes talks to mongoDb driver to generate new Id.
+// i.e mongoDb do not generate these ObjectIds andso that we don't have to wait for mongoDb to generate them
+// which makes it fast and highly scalable.
+
+//  ObjectId is of 24 characters and every 2 character represents a byte
+//  And Mongoose with the help of driver uses 12 bytes to generate this ObjectId.
+
+// _id : 6144f7dd0aef402440ea18bb
+          (24 characters)
+
+        // 12 bytes
+           // 4 bytes: timestamp
+           // 3 bytes: machine identifier
+           // 2 bytes: process identifier
+           // 3 bytes: counter
+
+        // 1 byte = 8 bits
+        // So in 1byte we can store 2^8 = 256 Different nos
+        // So in 3 bytes counter can store upto 2^24 = 16M nos thats very large(thats the range of uniqueness)
+        // So in order to produce a counter with duplicate count we have to ovrflow this no of documents at a time. 
+        // Which makes it very unique and almost unattainable.
+
+        
+
